@@ -1,5 +1,6 @@
 export enum ROUTES {
     home = "/",
     primeiraRota = "/primeiraRota",
-    segundaRota = "/segundaRota"
+    segundaRota = "/segundaRota",
+    terceiraRota = "/terceiraRota"
 }

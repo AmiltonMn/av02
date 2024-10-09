@@ -8,7 +8,7 @@ export default function Home() {
   }
   return (
     <div>
-      <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota"/>
+      <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota" op4="Terceira Rota"/>
     </div>
   );
 }

@@ -2,10 +2,11 @@ import { ROUTES } from "@/constants/route";
 import Link from "next/link";
 
 
-export const Menu = ({op1, op2, op3} : {
+export const Menu = ({op1, op2, op3, op4} : {
     op1: string;
     op2: string;
     op3: string;
+    op4: string;
 }) => {
 
     const style = 
@@ -19,6 +20,7 @@ export const Menu = ({op1, op2, op3} : {
         <Link href={ROUTES.home} className={style.bttn}>{op1}</Link>
         <Link href={ROUTES.primeiraRota} className={style.bttn}>{op2}</Link>
         <Link href={ROUTES.segundaRota} className={style.bttn}>{op3}</Link>
+        <Link href={ROUTES.terceiraRota} className={style.bttn}>{op4}</Link>
     </nav>
     )
 }

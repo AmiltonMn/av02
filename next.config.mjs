@@ -22,8 +22,12 @@ const nextConfig = {
                 destination: "/primeiraRota"
             },
             {
-                source: "/primeira-segunda",
+                source: "/segunda-rota",
                 destination: "/segundaRota"
+            },
+            {
+                source: "/terceira-rota",
+                destination: "/terceiraRota"
             }
         ]
     }

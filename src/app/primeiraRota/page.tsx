@@ -39,7 +39,7 @@ const PrimeiraRota = () => {
     
     return (
         <>
-            <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota"/>
+            <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota" op4="Terceira Rota"/>
 
             <main className={style.main}>
                 <Suspense fallback={<div>Loading cards!...</div>}>

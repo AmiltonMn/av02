@@ -41,7 +41,7 @@ const SegundaRota = () => {
     return (
 
         <>
-            <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota"/>
+            <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota" op4="Terceira Rota"/>
             <div>
                 <input type="text" value={page} onChange={(e) => setpage(e.target.value)} placeholder="1/6 - Insira uma página!"/>
             </div>
