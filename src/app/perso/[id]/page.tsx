@@ -50,7 +50,7 @@ const Perso = async ({params: {id}} : IPerso) => {
                                 <p>Total KI: {character.maxki}</p>
                             </div>
                         </div>
-                        <div className="flex justify-center items-center mt-48 flex-wrap w-[700px]">
+                        <div className="flex justify-start items-center mt-48 flex-wrap w-[700px]">
                             <p>{character.description}</p>
                         </div>
                     </div>
