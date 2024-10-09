@@ -14,17 +14,20 @@ export const Card = ({name, ki, maxki, race, gender, affiliation, image} : {
     const style = 
     {
         background: "h-fit w-[250px] rounded-t-lg",
-        cardText: "bg-slate-600 h-fit w-[200px] rounded-b-lg p-2 z-10",
-        charImage: "h-fit w-[100px]",
-        cardImages: "flex justify-center items-center hover:scale-110 hover:z-0 transition ease-in-out duration-200 h-[200px]",
+        cardText: "bg-slate-600 h-fit w-[250px] rounded-b-lg p-3 z-10",
+        charImage: "hover:scale-110 hover:z-0 h-[400px] object-scale-down absolute",
+        cardImages: "flex justify-center relative items-center transition ease-in-out duration-200 h-[400px]",
     }
 
     return (
         <>
-        <div>
+        <div className="mb-20">
+           
             <div className={style.cardImages}>
-                {/* <Image className={style.background} src={background} alt="cardBackground"></Image> */}
-                <Image className={style.charImage} width={130} height={0} src={image} alt="cardBackground"></Image>
+                {/* <div className={style.backgroundImage}>
+                    <Image src={background} alt="Background"></Image>
+                </div> */}
+                <Image className={style.charImage} fill src={image} alt={name}></Image>
             </div>
             <div className={style.cardText}>
                 <p className="text-white">{name}</p>
