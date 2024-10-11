@@ -21,7 +21,7 @@ const TerceiraRota = async () => {
     console.log(characters)
 
     const style = {
-        main: "flex justify-center items-start flex-wrap gap-5 mt-20",
+        main: "gap-10 flex justify-center items-start flex-wrap bg-gray-900",
     }
 
     return (
@@ -29,13 +29,15 @@ const TerceiraRota = async () => {
             <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota" op4="Terceira Rota"/>
 
             <main className={style.main}>
-                <Suspense>
-                    {characters.items.map((item) => {
-                        return (
-                            <Info name={item.name} gender={item.gender} affiliation={item.affiliation} race={item.race} id={item.id}/>
-                        )
-                    })}
-                </Suspense>
+                <div className="grid md:grid-cols-5 sm:grid-cols-1 gap-14 flex-wrap mt-20">
+                    <Suspense>
+                        {characters.items.map((item) => {
+                            return (
+                                <Info name={item.name} gender={item.gender} affiliation={item.affiliation} race={item.race} id={item.id}/>
+                            )
+                        })}
+                    </Suspense>
+                </div>
             </main>
         </>
     )

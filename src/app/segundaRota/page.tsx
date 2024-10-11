@@ -5,6 +5,8 @@ import { Suspense } from "react";
 import { Menu } from "@/components/menu";
 import { DbAPI } from "@/constants/DbAPI";
 import { Card } from "@/components/card";
+import Image from "next/image";
+import Logo from "@/assets/apiLogo.webp"
 
 const SegundaRota = () => {
 
@@ -27,7 +29,7 @@ const SegundaRota = () => {
     interface IData {
         name: string,
         ki: string,
-        maxki: string,
+        maxKi: string,
         race: string,
         gender: string,
         affiliation: string,
@@ -35,26 +37,35 @@ const SegundaRota = () => {
     }
 
     const style = {
-        main: "gap-3 flex justify-center mt-20 items-start flex-wrap gap-10",
+        main: "gap-10 flex justify-center items-start flex-wrap bg-gray-900",
     }
 
     return (
 
         <>
             <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota" op4="Terceira Rota"/>
-            <div>
-                <input type="text" value={page} onChange={(e) => setpage(e.target.value)} placeholder="1/6 - Insira uma página!"/>
-            </div>
-            {erro && <h5>{errorMessage}</h5>}
             <main className={style.main}>
-            <Suspense fallback={<div>Loading Cards!...</div>}>
-                {characters.map((item) => {
-                    
-                    return(
-                        <Card name={item.name} ki={item.ki} maxki={item.maxki} race={item.race} gender={item.gender} affiliation={item.affiliation} image={item.image}/>
-                    )
-                })}
-            </Suspense>
+
+                <div className="mt-20 mb-10 flex flex-col items-center">
+                    <Image src={Logo} alt="Logo"></Image>
+                    <h1 className="mt-20 text-4xl font-bold text-yellow-500">The Dragon Ball API</h1>
+                    <div className="mt-8 flex flex-col justify-center">
+                        <input className="w-[300px] placeholder:p-2 text-center rounded-2xl focus:ring focus:ring-yellow-700 focus:outline-none" type="text" value={page} onChange={(e) => setpage(e.target.value)} placeholder="1/6 - Insira uma página!"/>
+                        {erro && <h5 className="text-white flex justify-center">{errorMessage}</h5>}
+                    </div>
+                </div>
+                
+
+                <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14 flex-wrap">
+                    <Suspense fallback={<div>Loading Cards!...</div>}>
+                        {characters.map((item) => {
+                            
+                            return(
+                                <Card name={item.name} ki={item.ki} maxKi={item.maxKi} race={item.race} gender={item.gender} affiliation={item.affiliation} image={item.image}/>
+                            )
+                        })}
+                    </Suspense>
+                </div>
             </main>
         </>
     )

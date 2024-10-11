@@ -12,7 +12,7 @@ export const Menu = ({op1, op2, op3, op4} : {
     const style = 
     {
         bttn:"px-2 py-1 min-w-3.5 text-white cursor-pointer font-bold text-2xl",
-        nav: "bg-black gap-3 font-robFont text-medium flex flex-row justify-around align-center p-3"
+        nav: "bg-black gap-3 font-robFont text-medium flex flex-row justify-around align-center p-3 flex-wrap sticky top-0 w-full z-10"
     }
 
     return (
