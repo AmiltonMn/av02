@@ -29,7 +29,7 @@ const TerceiraRota = async () => {
             <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota" op4="Terceira Rota"/>
 
             <main className={style.main}>
-                <div className="grid md:grid-cols-5 sm:grid-cols-1 gap-14 flex-wrap mt-20">
+                <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-14 flex-wrap mt-20">
                     <Suspense>
                         {characters.items.map((item) => {
                             return (

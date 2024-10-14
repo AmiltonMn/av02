@@ -22,8 +22,7 @@ export const Card = ({name, ki, maxKi, race, gender, affiliation, image} : {
 
     return (
         <>
-        <div className="mb-20">
-           
+        <div>
             <div className={style.cardImages}>
                 <Image className={style.backgroundImage} src={background} alt="Background"></Image>
                 <Image className={style.charImage} fill src={image} alt={name}></Image>

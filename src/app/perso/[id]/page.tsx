@@ -47,7 +47,9 @@ const Perso = async ({params: {id}} : IPerso) => {
             <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota" op4="Terceira Rota"/>
             <main className={style.main}>
                 <div className="w-[300px] flex flex-wrap flex-row justify-around gap-32 bg-zinc-700 h-fit pl-5 pr-2 pt-5 pb-5 rounded-lg sm:w-[480px] md:w-[700px] lg:w-[1000px] md:flex-nowrap">
-                    <Card name={character.name} ki={character.ki} maxKi={character.maxKi} race={character.race} gender={character.gender} affiliation={character.affiliation} image={character.image}/>
+                    <div className="flex justify-center items-center">
+                        <Card name={character.name} ki={character.ki} maxKi={character.maxKi} race={character.race} gender={character.gender} affiliation={character.affiliation} image={character.image}/>
+                    </div>
                     <div className="flex flex-col gap-5">
                         <div className="w-[300px] gap-3 flex justify-start flex-col flex-wrap">
                             <h1 className="text-lg text-yellow-500 font-bold">Descrição do Personagem</h1>

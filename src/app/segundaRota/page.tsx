@@ -37,14 +37,13 @@ const SegundaRota = () => {
     }
 
     const style = {
-        main: "gap-10 flex justify-center items-start flex-wrap bg-gray-900",
+        cards: "gap-10 flex justify-center items-start flex-wrap bg-gray-900",
     }
 
     return (
 
         <>
             <Menu op1="Home" op2="Primeira Rota" op3="Segunda Rota" op4="Terceira Rota"/>
-            <main className={style.main}>
 
                 <div className="mt-20 mb-10 flex flex-col items-center">
                     <Image src={Logo} alt="Logo"></Image>
@@ -55,18 +54,18 @@ const SegundaRota = () => {
                     </div>
                 </div>
                 
-
-                <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14 flex-wrap">
-                    <Suspense fallback={<div>Loading Cards!...</div>}>
-                        {characters.map((item) => {
-                            
-                            return(
-                                <Card name={item.name} ki={item.ki} maxKi={item.maxKi} race={item.race} gender={item.gender} affiliation={item.affiliation} image={item.image}/>
-                            )
-                        })}
-                    </Suspense>
+                <div className={style.cards}>
+                    <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14 flex-wrap">
+                        <Suspense fallback={<div>Loading Cards!...</div>}>
+                            {characters.map((item) => {
+                                
+                                return(
+                                    <Card name={item.name} ki={item.ki} maxKi={item.maxKi} race={item.race} gender={item.gender} affiliation={item.affiliation} image={item.image}/>
+                                )
+                            })}
+                        </Suspense>
+                    </div>
                 </div>
-            </main>
         </>
     )
 }
